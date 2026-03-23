@@ -1200,4 +1200,23 @@
                 let meaningHtml = (isPhrasalMode && q.meaning) ? `<div style="font-size: 13px; color: #b45309; background: #fef3c7; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 5px;">${q.meaning}</div>` : '';
                 
                 reviewList.innerHTML += `
-                    <div class="
+                    <div class="review-card">
+                        <div style="font-size: 12px; color: #94a3b8; margin-bottom: 5px;">${idx + 1}. 출처: ${q.source}</div>
+                        ${meaningHtml}
+                        <div class="review-ko">${q.ko}</div>
+                        <div class="review-en">${q.en}</div>
+                    </div>
+                `;
+            });
+        }
+    }
+
+    function resetToHome() {
+        document.getElementById('review-area').classList.add('hidden');
+        document.getElementById('mode-selection').classList.remove('hidden');
+        document.getElementById('main-title').innerText = "🚀 스피드 영어 퀴즈";
+    }
+</script>
+
+</body>
+</html>
